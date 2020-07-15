@@ -6,7 +6,7 @@ function App() {
   const [date, setDate] = useState(null);
   useEffect(() => {
     async function getDate() {
-      const res = await fetch('/api/date');
+      const res = await fetch('https://webpt16-vercel-deploy-project.vercel.app/api/date');
       const newDate = await res.text();
       setDate(newDate);
     }
@@ -48,8 +48,6 @@ function App() {
         .
       </p>
       <br />
-      <h2>The date according to Go is:</h2>
-      <p>{date ? date : 'Loading date...'}</p>
     </main>
   );
 }
